@@ -14,6 +14,10 @@ class Column
 
     protected $hide = false;
 
+    protected $classes = [];
+
+    protected $searchableCallback = null;
+
     protected $sortable = false;
 
     protected $sortableCallback = null;
@@ -118,5 +122,37 @@ class Column
     public function getSortableCallback()
     {
         return $this->sortableCallback;
+    }
+
+    public function searchable($callback = null)
+    {
+        if ($callback) {
+            $this->searchableCallback = $callback;
+
+            return $this;
+        }
+
+        $this->searchableCallback = function ($query, $search) {
+            $query->orWhere($this->getColumn(), 'like', "%{$search}%");
+        };
+
+        return $this;
+    }
+
+    public function getSearchableCallback()
+    {
+        return $this->searchableCallback;
+    }
+
+    public function addClass($class)
+    {
+        $this->classes[] = $class;
+
+        return $this;
+    }
+
+    public function getClasses()
+    {
+        return $this->classes;
     }
 }

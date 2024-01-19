@@ -14,7 +14,7 @@ class DateFilter implements FilterInterface
 
     public function render()
     {
-        return view('livewire.datatable.filters.date', [
+        return view('livewire-datatables::filters.date', [
             'name' => $this->name,
             'range' => $this->range,
         ]);

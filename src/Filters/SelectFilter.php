@@ -15,7 +15,7 @@ class SelectFilter implements FilterInterface
 
     public function render()
     {
-        return view('livewire.datatable.filters.select', [
+        return view('livewire-datatables::filters.select', [
             'name' => $this->name,
             'options' => $this->options,
         ]);

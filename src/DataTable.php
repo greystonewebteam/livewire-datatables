@@ -12,9 +12,15 @@ abstract class DataTable extends Component
 {
     use WithFilters, WithPagination, WithSorting;
 
-    protected $title = 'Table';
+    public bool $showSearch = true;
+
+    public bool $showPerPage = true;
+
+    public $perPage;
 
     protected $searchPlaceholder = 'Search';
+
+    protected $emptyMessage = 'No results found';
 
     protected $listeners = [
         'refreshDatatable' => '$refresh',
@@ -55,6 +61,18 @@ abstract class DataTable extends Component
     {
         $query = $this->query();
 
+        $query->when($this->getFilter('search'), function ($query, $search) {
+            $query->where(function ($query) use ($search) {
+                foreach ($this->columns() as $column) {
+                    if (! ($callback = $column->getSearchableCallback())) {
+                        continue;
+                    }
+
+                    $callback($query, $search);
+                }
+            });
+        });
+
         $this->applySorts($query);
 
         if (! isset($this->selectableColumns) || empty($this->selectedColumns)) {
@@ -68,11 +86,10 @@ abstract class DataTable extends Component
     {
         $selectableColumns = $this->selectableColumns ?? false;
 
-        return view('livewire.datatable.datatable', [
-            'title' => $this->title,
+        return view(config('livewire-datatables.view'), [
             'rowView' => $this->rowView(),
             'rows' => $this->buildQuery()
-                ->paginate(),
+                ->paginate($this->perPage),
             'columns' => $this->columns(),
             'filterOptions' => $this->filters(),
             'actionsView' => $this->actionsView(),
