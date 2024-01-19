@@ -1,0 +1,19 @@
+{
+    "name": "greystoneweb/livewire-datatables",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Greystoneweb\\LivewireDatatables\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Isaac Dew",
+            "email": "idew@greystonetech.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^10.41",
+        "livewire/livewire": "^3.3"
+    }
+}
