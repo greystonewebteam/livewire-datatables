@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Classes\DataTable\Traits;
+namespace Greystoneweb\LivewireDataTables\Traits;
 
 trait WithSelectableColumns
 {

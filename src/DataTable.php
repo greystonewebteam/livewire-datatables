@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Classes\DataTable;
+namespace Greystoneweb\LivewireDataTables;
 
-use App\Classes\DataTable\Traits\WithFilters;
-use App\Classes\DataTable\Traits\WithSorting;
+use Greystoneweb\LivewireDataTables\Traits\WithFilters;
+use Greystoneweb\LivewireDataTables\Traits\WithSorting;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Livewire\Component;
 use Livewire\WithPagination;

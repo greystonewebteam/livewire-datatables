@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Classes\DataTable\Traits;
+namespace Greystoneweb\LivewireDataTables\Traits;
 
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Livewire\Attributes\Url;

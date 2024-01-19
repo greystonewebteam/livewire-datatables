@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Classes\DataTable;
+namespace Greystoneweb\LivewireDataTables;
 
 use Illuminate\Support\Facades\Blade;
 

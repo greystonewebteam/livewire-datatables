@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Classes\DataTable;
+namespace Greystoneweb\LivewireDataTables;
 
-use App\Classes\DataTable\Filters\DateFilter;
-use App\Classes\DataTable\Filters\SelectFilter;
 use BadMethodCallException;
+use Greystoneweb\LivewireDataTables\Filters\DateFilter;
+use Greystoneweb\LivewireDataTables\Filters\SelectFilter;
 
 class Filter
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Classes\DataTable\Traits;
+namespace Greystoneweb\LivewireDataTables\Traits;
 
-use App\Classes\DataTable\Export;
+use Greystoneweb\LivewireDataTables\Export;
 use Maatwebsite\Excel\Excel;
 
 trait Exportable

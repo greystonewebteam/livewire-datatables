@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Classes\DataTable;
+namespace Greystoneweb\LivewireDataTables;
 
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromQuery;

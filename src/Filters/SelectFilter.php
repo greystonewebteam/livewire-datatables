@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Classes\DataTable\Filters;
+namespace Greystoneweb\LivewireDataTables\Filters;
 
-use App\Classes\DataTable\FilterInterface;
+use Greystoneweb\LivewireDataTables\FilterInterface;
 
 class SelectFilter implements FilterInterface
 {
