@@ -24,7 +24,7 @@ class UsersTable extends DataTable
 }
 ```
 
-And then you can call the `export()` method from your view with `wire:click` and all of the results will be automatically be exported to CSV with filters/sorts applied. If the exported file doesn't look quite right, you can create a custom `Export` instance that extends `Greystoneweb\LivewireDataTables\Export` and return it in a method called `exporterInstance` on the datatable component.
+And then you can call the `export()` method from your view with `wire:click` and all of the results will be automatically be exported to CSV with filters/sorts applied. If the exported file doesn't look quite right, you can create a custom `Export` instance that extends `Greystoneweb\LivewireDataTables\Export` and return it in a method called `exporterInstance` on the datatable component. This is particularly useful when dealing with relationships.
 
 Example:
 

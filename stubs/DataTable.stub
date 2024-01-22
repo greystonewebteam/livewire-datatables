@@ -1,0 +1,24 @@
+<?php
+
+namespace {{namespace}};
+
+use Greystoneweb\LivewireDataTables\DataTable;
+use Illuminate\Contracts\Database\Eloquent\Builder;
+
+class {{class}} extends DataTable
+{
+    public function columns(): array
+    {
+        return [];
+    }
+
+    public function query(): Builder
+    {
+
+    }
+
+    public function rowView(): string
+    {
+        return '{{view}}';
+    }
+}
