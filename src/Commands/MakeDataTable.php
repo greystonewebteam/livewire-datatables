@@ -11,7 +11,7 @@ class MakeDataTable extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'make:datatable {name} {--title=} {--view=}';
+    protected $signature = 'make:datatable {name} {--view=}';
 
     /**
      * The console command description.

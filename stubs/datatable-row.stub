@@ -1,2 +1,2 @@
-<x-table.cell>
-</x-table.cell>
+<x-livewire-datatables::cell>
+</x-livewire-datatables::cell>
