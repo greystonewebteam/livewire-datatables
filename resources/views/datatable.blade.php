@@ -71,9 +71,9 @@
                                     @foreach ($rows as $row)
                                         <tr class="even:bg-gray-50">
                                             @foreach ($this->selectedColumnObjects as $column)
-                                                <x-table.cell>
+                                                <x-livewire-datatables::cell>
                                                     {!! $column->display($row) !!}
-                                                </x-table.cell>
+                                                </x-livewire-datatables::cell>
                                             @endforeach
                                         </tr>
                                     @endforeach
