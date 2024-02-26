@@ -1,0 +1,13 @@
+.greystoneweb-datatable .animate-slide {
+    animation: infinite 2s slideover;
+}
+
+@keyframes slideover {
+    from {
+        margin-left: 0%;
+    }
+
+    to {
+        margin-left: 100%;
+    }
+}

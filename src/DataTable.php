@@ -16,7 +16,7 @@ abstract class DataTable extends Component
 
     public bool $showPerPage = true;
 
-    public $perPage;
+    public $perPage = 10;
 
     protected $searchPlaceholder = 'Search';
 
@@ -97,6 +97,7 @@ abstract class DataTable extends Component
             'modals' => $this->modals(),
             'searchPlaceholder' => $this->searchPlaceholder,
             'selectableColumns' => $selectableColumns,
+            'emptyMessage' => $this->emptyMessage,
         ]);
     }
 }

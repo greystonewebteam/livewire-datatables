@@ -1,4 +1,8 @@
-<div>
+<div class="greystoneweb-datatable">
+    @assets
+        <link rel="stylesheet" href="/vendor/livewire-datatables/css/styles.css" />
+    @endassets
+
     <div class="flex justify-between flex-wrap items-center relative">
         <div class="flex gap-2 flex-wrap-reverse">
             @if ($showSearch)
@@ -6,10 +10,10 @@
                     placeholder="{{ $searchPlaceholder }}" />
             @endif
             @if (!empty($filterOptions))
-                @include('livewire.datatable.partials.filters')
+                @include('livewire-datatables::partials.filters')
             @endif
             @if ($selectableColumns)
-                @include('livewire.datatable.partials.columns-dropdown')
+                @include('livewire-datatables::partials.columns-dropdown')
             @endif
         </div>
         <div class="flex items-center gap-4 sm:mb-0 mb-2">

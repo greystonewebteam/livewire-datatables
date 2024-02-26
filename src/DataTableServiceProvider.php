@@ -22,6 +22,10 @@ class DataTableServiceProvider extends ServiceProvider
             __DIR__.'/../stubs/DataTable.stub' => base_path('stubs/DataTable.stub'),
             __DIR__.'/../stubs/datatable-row.stub' => base_path('stubs/datatable-row.stub'),
         ]);
+
+        $this->publishes([
+            __DIR__.'/../public' => public_path('vendor/livewire-datatables'),
+        ], 'public');
     }
 
     public function register()

@@ -1,5 +1,5 @@
 <div class="relative flex" x-data="{ open: false }">
-    <button @click.prevent="open = !open" class="w-full inline-flex items-center justify-center px-3 py-2 leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-700 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+    <button @click.prevent="open = !open" class="w-full inline-flex items-center justify-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
         <i class="fas fa-filter mr-1"></i> <span class="mr-2 bg-indigo-800 h-5 w-5 flex items-center text-xs justify-center text-white p-1 rounded-full">{{ $filterCount = count(array_filter($this->filters ?? [])) }}</span> {{ str()->plural('Filter', $filterCount) }}
     </button>
     <div x-cloak x-show="open" @click.away="open = false"
