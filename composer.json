@@ -23,7 +23,7 @@
         }
     ],
     "require": {
-        "laravel/framework": "^10.41",
+        "laravel/framework": "^10.41|^11.0",
         "livewire/livewire": "^3.3"
     },
     "require-dev": {
